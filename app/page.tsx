@@ -1,21 +1,40 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/blogs";
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
+    <div className="grid min-h-screen md:min-h-[80vh]">
+      <section>
+        <p className="leading-[1.5] font-[family-name:var(--font-baskerville)] text-[#242424] dark:text-neutral-100 text-lg max-w-[500px]">
+          Designer and student who builds cool websites for his friends. Right
+          now he's working on a final senior project and redesigning FDA
+          nutrition labels for class.
+        </p>
+      </section>
+      <section>
+        <h2>Work</h2>
+        <ul>
+          <Link href="seniorthesis">
+            <li>Senior thesis</li>
+          </Link>
+          <Link href="lacima">
+            <li>La Cima</li>
+          </Link>
+          <Link href="graceanthony">
+            <li>Grace Anthony</li>
+          </Link>
+          <Link href="finncrawford">
+            <li>Finn Crawford</li>
+          </Link>
+          <Link href="huntermathews">
+            <li>Hunter Mathews</li>
+          </Link>
+        </ul>
+      </section>
+      <section>
+        <h2>Blog</h2>
         <BlogPosts />
-      </div>
-    </section>
-  )
+      </section>
+    </div>
+  );
 }
